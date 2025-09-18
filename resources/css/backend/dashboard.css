@@ -1,0 +1,205 @@
+/*OPTIMIZATION CODE FOR LONG SCREENS || PHONES */
+
+#collapsible_welcome_msg_container{
+	position: relative;
+	height: 70%;
+	width: calc(100vw - 1rem);
+	background-color: var(--accent_shade);
+	color: #fff;
+	border-radius: var(--corner_radius);
+	position: fixed;
+	z-index: 10;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	padding-bottom: 4rem;
+	box-shadow: 0 0 0.5rem 0.05rem #000000;
+	overflow: hidden;
+
+	transition: height 0.7s, width 0.7s;
+}
+
+#collapsible_welcome_msg_container > div:first-child{
+	height: 100%;
+	padding: 1rem;
+	visibility: visible;
+	overflow-y: auto;
+
+	transition: visibility 0.3s;
+}
+
+#collapsible_welcome_msg_container.collapse{
+	height: 4rem;
+	width: 4rem;
+}
+
+#collapsible_welcome_msg_container.collapse > div:first-child{
+	visibility: hidden;
+}
+
+#collapsible_welcome_msg_container.collapse > #collapse_toggle {
+	background-color: var(--accent_shade);
+	color: var(--accent_tint);
+}
+
+/* children of the collapsible_welcome_msg_container */
+#collapsible_welcome_msg_container > #credit {
+	position: absolute;
+	bottom: 0.5rem;
+	right: 5rem;
+	white-space: nowrap;
+}
+
+#collapse_toggle {
+	--btn_size: 4rem;
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: var(--btn_size);
+	width: var(--btn_size);
+	border-radius: inherit;
+
+	display: grid;
+	place-items: center;
+	background-color: var(--surface);
+
+	color: var(--accent_shade);
+
+	transition: color 0.5s, background-color 0.5s;
+}
+
+#welcome_msg_container{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 1rem;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* children of the welcome_msg_container */
+#welcome_msg_header{
+	text-align: center;
+	padding-top: 1rem;
+}
+
+header {
+	font-weight: bolder;
+	padding: 5px 0;
+}
+
+#options {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 2rem 0 1rem 0;
+	font-size: 0.8em;
+	
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+
+/* children of the options */
+.optionCard{
+	--card_size: 8.5rem;
+
+	height: var(--card_size);
+	width: var(--card_size);
+	display: grid;
+	grid-auto-flow: row;
+	justify-content: center;
+	justify-items: center;
+	align-content: center;
+	row-gap: 0.2rem;
+	border-radius: var(--corner_radius);
+	color: var(--accent_shade);
+	background-color: var(--accent_tint);
+
+	transition: box-shadow 0.5s;
+}
+
+.optionCard:hover{
+	box-shadow: 0 0 1rem var(--accent_tint);
+}
+
+#news_title{
+	font-weight: bold;
+}
+
+#news_cards_wrapper{
+	margin-top: 2rem;
+	padding: 0 0.5rem;
+}
+
+#news_cards_wrapper > div[class*="notification_card"]{
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: auto;
+	align-items: center;
+	border-top: dashed 1px var(--accent);
+	padding: 1rem 0;
+	margin: 0;
+	border-radius: 0;
+}
+
+#news_cards_wrapper > div:nth-child(2){
+	border-top: none;
+}
+
+#news_txt{
+	color: var(--accent_shade);
+	font-weight: bold;
+}
+
+#timestamp{
+	width: max-content;
+	color: #00000066;
+	border-left: solid 2px #ddd;
+	padding-left: 10%;
+	font-style: italic;
+	margin: -0.5rem 0;
+}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
+
+
+@media only screen and (min-width: 600px)
+{
+	
+	#collapsible_welcome_msg_container{
+		height: 30%;
+	}
+
+	#news_cards_wrapper > div[class*="notification_card"]{
+		grid-template-columns: 6fr 1fr;
+	}
+	
+}
+
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  LAPTOPS */
+
+
+@media only screen and (min-width: 1000px)
+{
+
+	#collapsible_welcome_msg_container{
+		width: calc(100vw - var(--navbar-width) - 2rem);
+		right: 1rem;
+	}
+
+	#collapse_toggle:hover{
+		cursor: pointer;
+	}
+
+	#news_cards_wrapper{
+		padding: 0;
+	}
+
+	#news_cards_wrapper > div[class*="notification_card"]{
+		grid-template-columns: 11fr 1fr;
+	}
+
+}

@@ -1,0 +1,91 @@
+:root {
+	--corner_radius: 0.5rem;
+	--blur_intensity: 0.5rem;
+
+	--navbar-height: 11rem;
+	--navbar-width: 23rem;
+
+	/*THEME COLORS*/
+	--accent: rgb(106, 157, 199);
+	--accent_tint: rgb(180, 205, 223);
+    --accent_shade: rgb(0, 112, 160);
+
+	--accent_tint2: hsl(206, 100%, 95%);
+
+	--txt: #333;
+	--surface: #fff;
+
+	font-size: 62.5%;
+}
+
+@font-face {
+	font-family: my_roboto;
+	src: url("../assets/fonts/Mukta-Regular.ttf");
+}
+
+a{
+	text-decoration: none;	
+}
+
+a:hover{
+	cursor: pointer;
+}
+
+input[type="submit"]{
+	cursor: pointer;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	font-size: 1.6rem;
+	margin: 0;
+    font-family: my_roboto, Arial, Helvetica, sans-serif;
+	/* background-color: var(--accent); */
+}
+
+h1{
+	font-weight: bold !important;
+}
+
+/*OPTIMIZATION FOR TALL SCREENS ||  TABLETS */
+
+@media only screen and (min-width: 660px)
+{
+
+	
+	
+}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  LAPTOPS */
+
+@media only screen and (min-width: 1000px)
+{
+
+	/* :root {
+		--navbar-height: 5rem;
+	} */
+
+	.thin_scroll_bar{
+		/* WebKit-based browsers (Chrome, Safari) */
+		/* For Firefox compatibility */
+		/* scrollbar-width: auto; */
+		 /* thumb color, track color */
+		/* scrollbar-color: var(--accent_shade) var(--theme); */
+	
+		/* For WebKit-based browsers (Chrome, Safari) */
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--accent_shade);
+			/* border-radius: 1000px; */
+		}
+	
+		&::-webkit-scrollbar-track {
+			background-color: #ccc;
+		}
+	}
+
+}

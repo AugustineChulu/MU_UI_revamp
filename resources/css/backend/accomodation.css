@@ -1,0 +1,34 @@
+#housing_information_table{
+    padding: 1rem 0;
+}
+
+#housing_information_table > table{
+    width: 100%;
+}
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
+
+
+@media only screen and (min-width: 600px)
+{
+
+    #housing_information_table{
+        padding: 1rem 20%;
+    }
+
+}
+
+
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  LAPTOPS */
+
+
+@media only screen and (min-width: 950px)
+{
+
+    /* #housing_information_table{
+        padding: 0 40%;
+    } */
+
+}

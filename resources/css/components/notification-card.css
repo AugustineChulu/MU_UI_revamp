@@ -1,0 +1,63 @@
+.notification_cards_wrapper > div{
+	margin: 0.5rem 0;
+	border-radius: var(--corner_radius);
+}
+
+.notification_icon{
+	position: relative;
+	width: 5rem;
+	color: #fff;
+}
+
+.notification_icon > i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.notification_text{
+	padding: 1rem;
+}
+
+.alert-1{
+	background-color: #eeadad;
+	border: solid 2px #bd0000;
+	color: #bd0000;
+
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto;
+}
+
+.alert-1_icon{
+	background-color: #bd0000;
+}
+
+.alert-2{
+	background-color: #e4d4a8;
+	border: solid 2px #a07500;
+	color: #a07500;
+
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto;
+}
+
+.alert-2_icon{
+	background-color: #a07500;
+}
+
+.regular-1{
+	background-color: #b6e283;
+	border: solid 2px #008800;
+	color: #008800;
+
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto;
+}
+
+.regular-1_icon{
+	background-color: #008800;
+}
